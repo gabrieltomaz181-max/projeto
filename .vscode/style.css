@@ -79,11 +79,16 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: deslizar-dixcosta 0.2s;
 }
 
 .claro #switch button {
-  right: 0;
-  left: initial;
+  animation: deslizar 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -172,5 +177,26 @@ footer {
 
   .claro {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animações*/
+@keyframes deslizar {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes deslizar-dixcosta {
+  from {
+    left: 50%
+  }
+
+  to {
+    left: 0;
   }
 }
